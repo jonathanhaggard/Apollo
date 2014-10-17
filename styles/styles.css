@@ -441,7 +441,8 @@ html, body, .container, #scene, .layer{
   position: absolute;
   top: -5%;
   left: -5%;
-  display: block
+  display: block;
+  pointer-events: none;
 }
 @-webkit-keyframes gogogo {
   0%, 100% {
@@ -510,9 +511,10 @@ p{
 	position: absolute;
 	width: 100%;
 	text-align: center;
-	bottom: 10%;
-	-webkit-animation: superman 1s steps(6);
+	bottom: 0%;
+/*	-webkit-animation: superman 1s steps(6);*/
 		color: rgba(255,255,255,1);
+	background: black;
 }
 
 @-webkit-keyframes superman {
