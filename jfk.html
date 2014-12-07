@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Chronicled</title>
+
+	<!-- Behavioral Meta Data -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:200' rel='stylesheet' type='text/css'>
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="styles/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/animsition.min.css"/>
+</head>
+<body>
+<div class="animsition">
+	<div id="container" class="container">
+		<ul id="scene" class="scene">
+			
+			<li class="layer bg jfk" data-depth="0.15"></li>
+
+			
+			<li class="layer" data-depth="0.20">
+				
+			<video id="video" controls style="opacity: 0; position: absolute; top: -90000px; left: -90000px;">
+			  <source src="img/jfk/vid.webm" type="video/webm">
+			  <source src="img/jfk/vid.mp4" type="video/mp4">
+			</video>
+			</li>
+			
+			<div class="grain"></div>
+					
+			
+			
+		</ul>
+		
+
+		<div class="text" id="text" data-depth="0.20">
+			<div id="houston"></div>
+		</div>
+	</div>
+    
+    <div class="menu">
+    	
+    	<a href="nixon.html" class="animsition-link">
+    	<div class="character nixon">
+    		<div class="date">1969</div>
+    		<div class="name">
+    			President Nixon
+    			<br>
+    			Speaks with Apollo 11 Crew
+    		</div>
+    	</div>
+    	</a>
+    	
+    	<a href="jfk.html" class="animsition-link">
+    	<div class="character kennedy">
+    		<div class="date">1969</div>
+    		<div class="name">
+	    		President Kennedy
+	    		<br>
+	    		On Secret Societies
+    		</div>
+    	</div>
+    	</a>
+    	
+    	<a href="malcolm.html" class="animsition-link">
+    	<div class="character malcolm">
+    		<div class="date">1969</div>
+    		<div class="name">
+    			Malcolm X
+    			<br>
+    			Oxford Union Debate
+    		</div>
+    	</div>
+    	</a>
+    	
+    	
+    	<a href="malcolm.html" class="animsition-link">
+    	<div class="character malcolm">
+    		<div class="date">1969</div>
+    		<div class="name">
+    			Malcolm X
+    			<br>
+    			Oxford Union Debate
+    		</div>
+    	</div>
+    	</a>
+    	
+    	<a href="malcolm.html" class="animsition-link">
+    	<div class="character malcolm">
+    		<div class="date">1969</div>
+    		<div class="name">
+    			Malcolm X
+    			<br>
+    			Oxford Union Debate
+    		</div>
+    	</div>
+    	</a>
+    	<div class="grain"></div>
+    </div>
+</div>
+
+<div id="hamburger" class="hamburger">
+	<div class="top-bun"></div>
+	<div class="bottom-bun"></div>
+</div>
+
+</body>
+	<!-- Scripts -->
+	<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script src="js/jquery.animsition.min.js"></script>
+	<script src="js/popcorn-custom.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/parallax/1.1.1/jquery.parallax.min.js"></script>
+	<script>
+    $(".animsition").animsition({
+    
+    	loading               :    false,
+    	inDuration            :    300,
+    	outDuration           :    800
+    
+    });
+	// Yep, that's it!
+	$('#scene').parallax();
+	
+	$('#hamburger').click(function(){
+		$('.menu').toggleClass('peekaboo');
+		$('.top-bun').toggleClass('rotate');
+		$('.bottom-bun').toggleClass('rotate');
+		
+	});
+	
+	$('.pointtome').click(function(){
+		$('.front').toggleClass('getdown');
+		$('#video').toggleClass('getup');
+	});
+
+	    Popcorn( function () {
+	      var p = Popcorn( "#video" )
+			
+
+	        // HTML text, rendered as HTML
+	        .text({
+	          start: .1,
+	          end: 2.23,
+	          text: '<p>The very word "secrecy" is repugnant</p>',
+	          target: 'text'
+	        })
+	        
+	        .text({
+	          start: 2.23,
+	          end: 5.14,
+	          text: '<p>in a free and open society</p>',
+	          target: 'text'
+	        })
+	        
+	        .text({
+	          start: 5.14,
+	          end: 7.13,
+	          text: '<p>and we are as a people</p>',
+	          target: 'text'
+	        })
+	        
+	        .text({
+	          start: 7.13,
+	          end: 9.24,
+	          text: '<p>inherently and historically</p>',
+	          target: 'text'
+	        })
+	        
+	        .text({
+	          start: 9.24,
+	          end: 12.07,
+	          text: '<p>opposed to secret societies,</p>',
+	          target: 'text'
+	        })
+	        
+	        .text({
+	          start: 12.07,
+	          end: 13.23,
+	          text: '<p>to secret oaths</p>',
+	          target: 'text'
+	        })
+	        
+	        .text({
+	          start: 13.23,
+	          end: 16,
+	          text: '<p>and to secret proceedings.</p>',
+	          target: 'text'
+	        })
+	        
+	        .text({
+	          start: 16,
+	          end: 18.03,
+	          text: '<p>We decided long ago</p>',
+	          target: 'text'
+	        })
+	                
+	        .text({
+	          start: 18.03,
+	          end: 21.18,
+	          text: '<p>that the dangers of excessive and unwarranted concealment</p>',
+	          target: 'text'
+	        })
+	        
+	        .text({
+	          start: 21.18,
+	          end: 25.21,
+	          text: '<p>of pertinent facts far outweighed the dangers</p>',
+	          target: 'text'
+	        })
+	        
+	        .text({
+	          start: 25.21,
+	          end: 28.10,
+	          text: '<p>which are cited to justify it.</p>',
+	          target: 'text'
+	        })
+	        
+	        
+	        
+	        
+	        
+	        .text({
+	          start: 28.10,
+	          end: 30.03,
+	          text: '<p>Even today,</p>',
+	          target: 'text'
+	        })
+	        
+	        .text({
+	          start: 30.03,
+	          end: 34.07,
+	          text: '<p>there is little value in opposing the threat of a closed society</p>',
+	          target: 'text'
+	        })
+	        
+	        .text({
+	          start: 34.07,
+	          end: 37.15,
+	          text: '<p>by imitating its arbitrary restrictions.</p>',
+	          target: 'text'
+	        })
+	        
+	        .text({
+	          start: 37.15,
+	          end: 39.07,
+	          text: '<p>Even today,</p>',
+	          target: 'text'
+	        })
+	        
+	        .text({
+	          start: 39.07,
+	          end: 43.06,
+	          text: '<p>there is little value in insuring the survival of our nation</p>',
+	          target: 'text'
+	        })
+	        
+			.text({
+			  start: 43.06,
+			  end: 46.15,
+			  text: '<p>if our traditions do not survive with it.</p>',
+			  target: 'text'
+			})
+			
+			.text({
+			  start: 46.15,
+			  end: 49.04,
+			  text: '<p>And there is very grave danger</p>',
+			  target: 'text'
+			})
+			
+			.text({
+			  start: 49.04,
+			  end: 52.23,
+			  text: '<p>that an announced need for increased security</p>',
+			  target: 'text'
+			})
+			
+			.text({
+			  start: 52.23,
+			  end: 57.08,
+			  text: '<p>will be seized upon by those anxious to expand its meaning</p>',
+			  target: 'text'
+			})
+			
+			.text({
+			  start: 57.08,
+			  end: 61.12,
+			  text: '<p>to the very limits of official censorship and concealment.</p>',
+			  target: 'text'
+			})
+			
+			
+			
+			
+			
+			
+			
+			
+			.text({
+			  start: 61.12,
+			  end: 63.15,
+			  text: '<p>That I do not intend to permit</p>',
+			  target: 'text'
+			})
+			
+			.text({
+			  start: 63.15,
+			  end: 66.08,
+			  text: '<p>to the extent that it is in my control.</p>',
+			  target: 'text'
+			})
+			
+			.text({
+			  start: 66.08,
+			  end: 68.12,
+			  text: '<p>And no official of my Administration</p>',
+			  target: 'text'
+			})
+			
+			.text({
+			  start: 68.12,
+			  end: 70.20,
+			  text: '<p>whether his rank is high or low</p>',
+			  target: 'text'
+			})
+			
+			.text({
+			  start: 70.20,
+			  end: 72.19,
+			  text: '<p>civilian or military</p>',
+			  target: 'text'
+			})
+			
+			.text({
+			  start: 72.19,
+			  end: 75.12,
+			  text: '<p>should interpret my words here tonight</p>',
+			  target: 'text'
+			})
+			
+			.text({
+			  start: 75.12,
+			  end: 77.23,
+			  text: '<p>as an excuse to censor the news</p>',
+			  target: 'text'
+			})
+
+			
+			
+			
+			
+			
+			.text({
+			  start: 77.23,
+			  end: 79.18,
+			  text: '<p>to stifle dissent</p>',
+			  target: 'text'
+			})
+			
+			.text({
+			  start: 79.18,
+			  end: 82.08,
+			  text: '<p>to cover up our mistakes</p>',
+			  target: 'text'
+			})
+			
+			.text({
+			  start: 82.08,
+			  end: 84.21,
+			  text: '<p>or to withhold from the press and the public</p>',
+			  target: 'text'
+			})
+			
+			.text({
+			  start: 84.21,
+			  end: 100,
+			  text: '<p>the facts they deserve to know.</p>',
+			  target: 'text'
+			})
+						
+	        .controls( false ).play().volume( 1 );
+	    } );
+	</script>
+
+</body>
+</html>
