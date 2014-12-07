@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Chronicled</title>
+
+	<!-- Behavioral Meta Data -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:200' rel='stylesheet' type='text/css'>
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="styles/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="styles/animsition.min.css"/>
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+</head>
+<body>
+<div class="animsition">
+	<div id="container" class="container">
+		<ul id="scene" class="scene">
+			
+			<li class="layer bg nix" data-depth="0.15"></li>
+
+			
+			<li class="layer" data-depth="0.20">
+				
+				<div class="pointtome">
+				<div id="neil"></div>
+				<div class="back">
+				<!--<img class="astro" src="img/astro.png">-->
+				<video id="video" >
+				  <source src="img/nixon/vid.webm" type="video/webm">
+				  <source src="img/nixon/vid.mp4" type="video/mp4">
+				</video>
+	
+				</div>
+				
+				<div class="front"></div>
+				</div>
+			</li>
+			
+			<div class="grain"></div>
+					
+			
+			
+		</ul>
+		
+
+		<div class="text" id="text" data-depth="0.20">
+			<div id="houston"></div>
+			
+		</div>
+	</div>
+    
+	   <div class="menu">
+	    	
+
+	    	
+	    	<a href="jfk.html" class="animsition-link">
+	    	<div class="character kennedy">
+	    		<div class="date">1961</div>
+	    		<div class="name">
+		    		President Kennedy
+		    		<br>
+		    		On Secret Societies
+	    		</div>
+	    	</div>
+	    	</a>
+	    	
+	    	<a href="malcolm.html" class="animsition-link">
+	    	<div class="character malcolm">
+	    		<div class="date">1964</div>
+	    		<div class="name">
+	    			Malcolm X
+	    			<br>
+	    			Oxford Union Debate
+	    		</div>
+	    	</div>
+	    	</a>
+	    	
+	    	<a href="nixon.html" class="animsition-link">
+	    	<div class="character nixon">
+	    		<div class="date">1969</div>
+	    		<div class="name">
+	    			President Nixon
+	    			<br>
+	    			Speaks with Apollo 11 Crew
+	    		</div>
+	    	</div>
+	    	</a>
+	    	
+	    	<a href="hampton.html" class="animsition-link">
+	    	<div class="character hampton">
+	    		<div class="date">1967</div>
+	    		<div class="name">
+	    			Fred Hampton
+	    			<br>
+	    			Righteous Self Defense
+	    		</div>
+	    	</div>
+	    	</a>
+
+	    	
+	    	
+	    </div>
+	</div>
+	
+	<div class="grain menugrain"></div>
+	
+	<div id="hamburger" class="hamburger">
+		<div class="top-bun"></div>
+		<div class="bottom-bun"></div>
+	</div>
+	
+</div>	
+	<!-- Scripts -->
+	<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script src="js/jquery.animsition.min.js"></script>
+	<script src="js/popcorn-custom.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/parallax/1.1.1/jquery.parallax.min.js"></script>
+	<script>
+    $(".animsition").animsition({
+    
+    	loading               :    false,
+    	inDuration            :    300,
+    	outDuration           :    800
+    
+    });
+    // Yep, that's it!
+    $('#scene').parallax();
+    
+    $('#hamburger').click(function(){
+    	$('.menu').toggleClass('peekaboo');
+    	$('.top-bun').toggleClass('rotate');
+    	$('.bottom-bun').toggleClass('rotate');
+    	$('.menugrain').toggleClass('grainshow');
+    	
+    });
+
+	$('.pointtome').click(function(){
+		$('.front').toggleClass('getdown');
+		$('#video').toggleClass('getup');
+	});
+
+	    Popcorn( function () {
+	      var p = Popcorn( "#video" )
+			
+
+	        // HTML text, rendered as HTML
+	        .text({
+	          start: 1.9,
+	          end: 3.15,
+	          text: '<p>Uh, Neil and Buzz?</p>',
+	          target: 'houston'
+	        })
+	        
+	        .text({
+	          start: 4.05,
+	          end: 6.03,
+	          text: '<p>Uh, The President of The United States</p>',
+	          target: 'houston'
+	        })
+	        
+	        .text({
+	          start: 6.03,
+	          end: 8,
+	          text: '<p>is in his office now and would like</p>',
+	          target: 'houston'
+	        })
+	        
+	        .text({
+	          start: 8,
+	          end: 9.10,
+	          text: '<p>to say a few words to you.</p>',
+	          target: 'houston'
+	        })
+	        
+	        .text({
+	          start: 9.10,
+	          end: 9.3,
+	          text: '<p>Over.</p>',
+	          target: 'houston'
+	        })
+	        
+	        .text({
+	          start: 16.01,
+	          end: 17.5,
+	          text: '<p>That would be an honor.</p>',
+	          target: 'neil'
+	        })
+	        
+	        .text({
+	          start: 17.5,
+	          end: 19.01,
+	          text: '<p>Uh, Go ahead Mr. President</p>',
+	          target: 'houston'
+	        })
+	        
+	        .text({
+	          start: 19.01,
+	          end: 20,
+	          text: '<p>this is Houston, Out.</p>',
+	          target: 'houston'
+	        })
+	        
+	        
+	        
+	        
+	        
+	        .text({
+	          start: 22.01,
+	          end: 23.4,
+	          text: '<p>Hello Neil and Buzz,</p>',
+	          target: 'text'
+	        })
+	        
+	        .text({
+	          start: 23.4,
+	          end: 25.17,
+	          text: '<p>I am talking to you by telephone</p>',
+	          target: 'text'
+	        })
+	        
+	        .text({
+	          start: 25.17,
+	          end: 27.7,
+	          text: '<p>from the Oval Room at the White House,</p>',
+	          target: 'text'
+	        })
+	        
+	        .text({
+	          start: 27.7,
+	          end: 29.09,
+	          text: '<p>and this certainly has to be</p>',
+	          target: 'text'
+	        })
+	        
+	        .text({
+	          start: 29.09,
+	          end: 32.14,
+	          text: '<p>the most historic telephone call ever made</p>',
+	          target: 'text'
+	        })
+	        
+	        .text({
+	          start: 34.03,
+	          end: 38.12,
+	          text: '<p>I just cant tell you how proud we all are</p>',
+	          target: 'text'
+	        })
+	        
+	        .text({
+	          start: 38.12,
+	          end: 40.06,
+	          text: '<p>For every American this has to be</p>',
+	          target: 'text'
+	        })
+	        
+	        .text({
+	          start: 40.06,
+	          end: 42.1,
+	          text: '<p>the proudest day of our lives,</p>',
+	          target: 'text'
+	        })
+	        
+			.text({
+			  start: 42.1,
+			  end: 44.25,
+			  text: '<p>and for people all over the world,</p>',
+			  target: 'text'
+			})
+			
+			.text({
+			  start: 44.25,
+			  end: 46.17,
+			  text: '<p>I am sure they, too,</p>',
+			  target: 'text'
+			})
+			
+			.text({
+			  start: 46.17,
+			  end: 50.08,
+			  text: '<p>join with <span>Americans</span> in recog<span>nizing</span></p>',
+			  target: 'text'
+			})
+			
+			.text({
+			  start: 50.08,
+			  end: 52.05,
+			  text: '<p>what an immense feat this is.</p>',
+			  target: 'text'
+			})
+			
+			
+			
+			
+			
+			
+			
+			
+			.text({
+			  start: 53.05,
+			  end: 55.2,
+			  text: '<p>Because of what you have done</p>',
+			  target: 'text'
+			})
+			
+			.text({
+			  start: 55.2,
+			  end: 60.15,
+			  text: '<p>the heavens have become a part of mans world,</p>',
+			  target: 'text'
+			})
+			
+			.text({
+			  start: 60.15,
+			  end: 62.2,
+			  text: '<p>and as you talk to us from <span>the</span></p>',
+			  target: 'text'
+			})
+			
+			.text({
+			  start: 62.2,
+			  end: 65.07,
+			  text: '<p>Sea of Tranquility</p>',
+			  target: 'text'
+			})
+			
+			.text({
+			  start: 65.07,
+			  end: 67.23,
+			  text: '<p>it inspires us to redouble our efforts</p>',
+			  target: 'text'
+			})
+			
+			.text({
+			  start: 67.23,
+			  end: 72.23,
+			  text: '<p>to bring peace and tranquility to earth.</p>',
+			  target: 'text'
+			})
+
+			
+			
+			
+			
+			
+			.text({
+			  start: 72.23,
+			  end: 75.23,
+			  text: '<p>For one priceless moment</p>',
+			  target: 'text'
+			})
+			
+			.text({
+			  start: 75.23,
+			  end: 78.03,
+			  text: '<p>in the whole history of man</p>',
+			  target: 'text'
+			})
+			
+			.text({
+			  start: 78.03,
+			  end: 81.27,
+			  text: '<p>all the people on this earth are truly one.</p>',
+			  target: 'text'
+			})
+			
+			.text({
+			  start: 81.27,
+			  end: 85.2,
+			  text: '<p>One in their pride in what you have done</p>',
+			  target: 'text'
+			})
+			
+			.text({
+			  start: 85.2,
+			  end: 87.18,
+			  text: '<p>and one in our prayers that</p>',
+			  target: 'text'
+			})
+			
+			.text({
+			  start: 87.18,
+			  end: 95.06,
+			  text: '<p>you will return safely to earth.</p>',
+			  target: 'text'
+			})
+
+			
+	        .controls( false ).play().volume( 1 );
+	    } );
+	</script>
+
+</body>
+</html>

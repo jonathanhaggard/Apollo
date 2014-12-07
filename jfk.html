@@ -13,6 +13,7 @@
 	<!-- Styles -->
 	<link rel="stylesheet" type="text/css" href="styles/styles.css"/>
     <link rel="stylesheet" type="text/css" href="styles/animsition.min.css"/>
+    <link rel="icon" type="image/png" href="img/favicon.png" />
 </head>
 <body>
 <div class="animsition">
@@ -32,7 +33,45 @@
 			
 			<div class="grain"></div>
 					
-			
+			<div class="mobileonly">
+				<p>
+				The very word "secrecy" is repugnant
+				in a free and open society
+				and we are as a people
+				inherently and historically
+				opposed to secret societies,
+				to secret oaths and to secret proceedings.
+				We decided long ago that the dangers
+				of excessive and unwarranted concealment
+				of pertinent facts far outweighed the dangers
+				which are cited to justify it.
+				</p>
+				
+				<p>
+				Even today,
+				there is little value in opposing the threat of a closed society
+				by imitating its arbitrary restrictions.
+				Even today,
+				there is little value in insuring the survival of our nation
+				if our traditions do not survive with it.
+				And there is very grave danger that an announced need for increased security
+				will be seized upon by those anxious to expand its meaning
+				to the very limits of official censorship and concealment.
+				</p>
+				
+				<p>
+				That I do not intend to permit
+				to the extent that it is in my control.
+				And no official of my Administration
+				whether his rank is high or low
+				civilian or military
+				should interpret my words here tonight as an excuse to censor the news
+				to stifle dissent
+				to cover up our mistakes
+				or to withhold from the press and the public
+				the facts they deserve to know.
+				</p>
+			</div>
 			
 		</ul>
 		
@@ -42,71 +81,61 @@
 		</div>
 	</div>
     
-    <div class="menu">
-    	
-    	<a href="nixon.html" class="animsition-link">
-    	<div class="character nixon">
-    		<div class="date">1969</div>
-    		<div class="name">
-    			President Nixon
-    			<br>
-    			Speaks with Apollo 11 Crew
-    		</div>
-    	</div>
-    	</a>
-    	
-    	<a href="jfk.html" class="animsition-link">
-    	<div class="character kennedy">
-    		<div class="date">1969</div>
-    		<div class="name">
-	    		President Kennedy
-	    		<br>
-	    		On Secret Societies
-    		</div>
-    	</div>
-    	</a>
-    	
-    	<a href="malcolm.html" class="animsition-link">
-    	<div class="character malcolm">
-    		<div class="date">1969</div>
-    		<div class="name">
-    			Malcolm X
-    			<br>
-    			Oxford Union Debate
-    		</div>
-    	</div>
-    	</a>
-    	
-    	
-    	<a href="malcolm.html" class="animsition-link">
-    	<div class="character malcolm">
-    		<div class="date">1969</div>
-    		<div class="name">
-    			Malcolm X
-    			<br>
-    			Oxford Union Debate
-    		</div>
-    	</div>
-    	</a>
-    	
-    	<a href="malcolm.html" class="animsition-link">
-    	<div class="character malcolm">
-    		<div class="date">1969</div>
-    		<div class="name">
-    			Malcolm X
-    			<br>
-    			Oxford Union Debate
-    		</div>
-    	</div>
-    	</a>
-    	<div class="grain"></div>
-    </div>
-</div>
+	   <div class="menu">
+	    	
 
-<div id="hamburger" class="hamburger">
-	<div class="top-bun"></div>
-	<div class="bottom-bun"></div>
-</div>
+	    	
+	    	<a href="jfk.html" class="animsition-link">
+	    	<div class="character kennedy">
+	    		<div class="date">1961</div>
+	    		<div class="name">
+		    		President Kennedy
+		    		<br>
+		    		On Secret Societies
+	    		</div>
+	    	</div>
+	    	</a>
+	    	
+	    	<a href="malcolm.html" class="animsition-link">
+	    	<div class="character malcolm">
+	    		<div class="date">1964</div>
+	    		<div class="name">
+	    			Malcolm X
+	    			<br>
+	    			Oxford Union Debate
+	    		</div>
+	    	</div>
+	    	</a>
+	    	
+	    	<a href="nixon.html" class="animsition-link">
+	    	<div class="character nixon">
+	    		<div class="date">1969</div>
+	    		<div class="name">
+	    			President Nixon
+	    			<br>
+	    			Speaks with Apollo 11 Crew
+	    		</div>
+	    	</div>
+	    	</a>
+	    	
+	    	<a href="hampton.html" class="animsition-link">
+	    	<div class="character hampton">
+	    		<div class="date">1967</div>
+	    		<div class="name">
+	    			Fred Hampton
+	    			<br>
+	    			Righteous Self Defense
+	    		</div>
+	    	</div>
+	    	</a>
+	    </div>
+	</div>
+	
+	<div class="grain menugrain"></div>	
+	<div id="hamburger" class="hamburger">
+		<div class="top-bun"></div>
+		<div class="bottom-bun"></div>
+	</div>
 
 </body>
 	<!-- Scripts -->
@@ -129,7 +158,7 @@
 		$('.menu').toggleClass('peekaboo');
 		$('.top-bun').toggleClass('rotate');
 		$('.bottom-bun').toggleClass('rotate');
-		
+		$('.menugrain').toggleClass('grainshow');
 	});
 	
 	$('.pointtome').click(function(){
@@ -377,7 +406,7 @@
 			
 			.text({
 			  start: 84.21,
-			  end: 100,
+			  end: 94,
 			  text: '<p>the facts they deserve to know.</p>',
 			  target: 'text'
 			})
