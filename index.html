@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 
 	<title>Chronicled</title>
-	
+
 	<meta property="og:image" content="http://chronicled.us/img/cover.png"/>
 	<meta property="og:title" content="Chronicled"/>
 	<meta property="og:url" content="http://chronicled.us/"/>
@@ -20,6 +20,17 @@
 	<link rel="stylesheet" type="text/css" href="styles/styles.css"/>
     <link rel="stylesheet" type="text/css" href="styles/animsition.min.css"/>
     <link rel="icon" type="image/png" href="img/favicon.png" />
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-57415239-1', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
 </head>
 <body>
 <div class="animsition">
@@ -47,9 +58,44 @@
 			</li>
 			
 			<div class="grain"></div>
-					
 			
-			
+			<div class="mobileonly">
+				<p>
+				Hello Neil and Buzz,
+				I am talking to you by telephone
+				from the Oval Room at the White House,
+				and this certainly has to be
+				the most historic telephone call ever made
+				I just can't tell you how proud
+				we all are of what you [have done]
+				For every American this has to be
+				the proudest day of our lives,
+				and for people all over the world
+				I am sure they, too,
+				join with Americans in recognizing
+				what an immense feat this is.
+				</p>
+				
+				<p>
+				Because of what you have done
+				the heavens have become a part of
+				man's world,
+				and as you talk to us from [the]
+				Sea of Tranquility, it inspires
+				us to redouble our efforts to
+				bring peace and tranquility to earth.
+				</p>
+				
+				<p>
+				For one priceless moment in
+				the whole history of man
+				all the people on this earth are truly one
+				one in their pride in what you have done
+				and one in our prayers that you will
+				return safely to earth.
+				</p>
+			</div>
+								
 		</ul>
 		
 
@@ -60,22 +106,22 @@
 	</div>
     
 	   <div class="menu">
-	    	
-
-	    	
+	   
 	    	<a href="jfk.html" class="animsition-link">
 	    	<div class="character kennedy">
+	    	<img src="img/jfk/jfk.png" alt="" class="menuKennedy" />
 	    		<div class="date">1961</div>
 	    		<div class="name">
-		    		President Kennedy
-		    		<br>
-		    		On Secret Societies
+	   	    		President Kennedy
+	   	    		<br>
+	   	    		On Secret Societies
 	    		</div>
 	    	</div>
 	    	</a>
 	    	
 	    	<a href="malcolm.html" class="animsition-link">
 	    	<div class="character malcolm">
+	    	<img src="img/malcolm/malcolm.png" alt="" class="menuMalcolm" />
 	    		<div class="date">1964</div>
 	    		<div class="name">
 	    			Malcolm X
@@ -87,6 +133,7 @@
 	    	
 	    	<a href="nixon.html" class="animsition-link">
 	    	<div class="character nixon">
+	    	<img src="img/nixon/nix.png" alt="" class="menuNixon" />
 	    		<div class="date">1969</div>
 	    		<div class="name">
 	    			President Nixon
@@ -98,6 +145,7 @@
 	    	
 	    	<a href="hampton.html" class="animsition-link">
 	    	<div class="character hampton">
+	    	<img src="img/hampton/hampton.png" alt="" class="menuHampton" />
 	    		<div class="date">1967</div>
 	    		<div class="name">
 	    			Fred Hampton
@@ -106,20 +154,23 @@
 	    		</div>
 	    	</div>
 	    	</a>
-
-	    	
 	    	
 	    </div>
+	    
 	</div>
 	
 	<div class="grain menugrain"></div>
+	
+	<a href="http://criticalthought.me/" class="critical">
+		<img src="img/crit.svg" alt="" />
+	</a>
 	
 	<div id="hamburger" class="hamburger">
 		<div class="top-bun"></div>
 		<div class="bottom-bun"></div>
 	</div>
 	
-	<a href="https://twitter.com/intent/tweet?&amp;text=chronicled.us Sharing the true sentiment of history's greatest minds @criticl_me" class="tweet">
+	<a href="https://twitter.com/intent/tweet?&amp;text=http://chronicled.us Sharing the true sentiment of history's greatest minds @criticl_me" class="tweet">
 		<span class="tweeticon">
 			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" width="40px" height="26px" viewBox="0 0 20 16" version="1.1">
 			  <title>source twitter</title>
@@ -142,10 +193,11 @@
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/parallax/1.1.1/jquery.parallax.min.js"></script>
 	<script>
     $(".animsition").animsition({
-    
+    	inClass               :   'zoom-in',
+    	outClass              :   'fade-out-up-sm',
     	loading               :    false,
-    	inDuration            :    300,
-    	outDuration           :    800
+    	inDuration            :    400,
+    	outDuration           :    300
     
     });
     // Yep, that's it!
